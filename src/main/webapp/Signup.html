@@ -1,73 +1,68 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Signup page </title>
+<meta charset="ISO-8859-1">
+<title>Sign up</title>
 </head>
-
 <body>
-	
-	<form action="signup" method="post" enctype="multipart/form-data">
-		<fieldset style="width: 30%;">
-			<legend>Sign up</legend>
-	<table>
-		<tr>
-			<th>Name:</th>
-			<th><input type="text" name="fullname"></th>
-		</tr>
-		<tr>
-			<th>Email:</th>
-			<th><input type="email" name="email" required></th>
-		</tr>
-		<tr>
-			<th>Mobile:</th>
-			<th><input type="tel" pattern="[0-9]{10}" name="mobile" required></th>
-		</tr>
-		<tr>
-			<th>Passward:</th>
-			<th><input type="password" name="passward" required></th>
-		</tr>
-		<tr>
-			<th>Gender:</th>
-			<th>
-				<input type="radio" value="M" name="gender">Male
-				<input type="radio" value="F" name="gender">Female
-				<input type="radio" value="Oth" name="gender">Others
-				</th>
-		</tr>
-		<tr>
-			<th>Picture:</th>
-			<th><input type="file" name="picture" required></th>
-		</tr>
-		<tr>
-			<th>Country:</th>
-			<th>
-				<select name="country">
-					<option>India</option>
-					<option>USA</option>
-					<option>Dubai</option>
-				</select>
-			</th>
-		</tr>
-		<tr>
-			<td>
-				Date of birth
-			</td>
-			<td>
-		     <input type="date" name="dob" required>
-			</td>
-		</tr>
-	</table>
-	 <a href="hotel.html"><button type="submit">Signup</button></a>
-	 <a href="Signup.html"><button type="reset">cancel</button></a>
-     </fieldset>
-	
-	<a href="hotel.html">Already have Account?Click here to Login</a>
-	</form>
-	<a href="home.html">Home</a>
-	
 
+     <div id="sign up">
+		 <form action="signup" method="post" enctype="multipart/form-data">
+			<fieldset style="border: 5px solid green; width: 70% ;">
+				<legend>Signup</legend>
+				<table>
+					<tr>
+						<th>Name:</th>
+						<th><input type="text" name="fullname" required></th>
+					</tr>
+					<tr>
+						<th>Email:</th>
+						<th><input type="email" name="email" required></th>
+					</tr>
+					<tr>
+						<th>Mobile:</th>
+						<th><input type="number" name="mobile" required ></th>
+					</tr>
+					<tr>
+						<th>Password:</th>
+						<th><input type="password" name="password" required></th>
+					</tr>
+					<tr>
+						<th>Gender:</th>
+						<th>
+							<input type="radio" value="Male" name="gender">Male
+							<input type="radio" value="Female" name="gender">Female
+							<input type="radio" value="Others" name="gender">Others
+						</th>
+					</tr>
+					<tr>
+						<th>Picture:</th>
+						<th><input type="file" name="picture"></th>
+					</tr>
+					<tr>
+						<th>Country:</th>
+						<th>
+							<select name="country" >
+								<option>India</option>
+								<option>USA</option>
+								<option>UK</option>
+								<option>Russia</option>
+								<option>Srilanka</option>
+							</select>
+						</th>
+					</tr>
+					<tr>
+						<th>Date of birth:</th>
+						<th><input type="date" name="dob" required></th>
+					</tr>
+				</table>
+               <!-- <button type="submit"><a href="Login.html">Signup</a></button> -->
+			   <button type="submit">Signup</button>
+			   <button type="reset"><a href="Signup.html">Cancel</a></button>
+			</fieldset>
+			<a href="Login.html">Already have an account?click here to login</a>
+		 </form> 
+		 <a href="Home.html">Home</a>
+	 </div>
 </body>
-
 </html>
