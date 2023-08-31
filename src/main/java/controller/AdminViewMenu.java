@@ -15,7 +15,7 @@ import dto.AddFoodItem;
 @WebServlet("/ViewMenu")
 public class AdminViewMenu extends HttpServlet {
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		// logic to fetch data from database
 		MyDao dao = new MyDao();
