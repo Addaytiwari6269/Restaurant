@@ -45,7 +45,12 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
 	   item.setPrice(price);
 	   item.setQuantity(quantity);
 	   item.setType(type);
-	   item.setPicture(picture);
+	  if(picture.length==0) {
+		  item.setPicture(dao.find(id).getPicture());
+		  
+	  }else {
+		  item.setPicture(picture);
+	  }
 	   dao.update(item);
 	   resp.getWriter().print("<h1 style='color: orange'>Data Update Successfully</h1>");
 	   req.getRequestDispatcher("ViewMenu").include(req, resp);

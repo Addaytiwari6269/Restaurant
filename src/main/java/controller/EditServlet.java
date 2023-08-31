@@ -20,6 +20,6 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 	AddFoodItem item=dao.find(id);
 	
 	req.setAttribute("item", item);
-	req.getRequestDispatcher("Edit.jsp").forward(req, resp);
+	req.getRequestDispatcher("Edit.jsp").include(req, resp);
 }
 }

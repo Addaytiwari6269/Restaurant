@@ -13,8 +13,8 @@
 <body>
 <% AddFoodItem item=(AddFoodItem)request.getAttribute("item"); %>
 
-<form action="" method="post" enctype="multipart/form-data">
-     Id :<input type="text" name="id" value="<%=item.getId()%>" hidden=""><br>
+<form action="update" method="post" enctype="multipart/form-data">
+     <input type="text" name="id" value="<%=item.getId()%>" hidden=""><br>
   Name:<input type="text" name="name" value="<%=item.getName()%>"><br>
   Price:<input type="text" name="price" value="<%=item.getPrice()%>"><br>
   Food Type:
@@ -22,8 +22,8 @@
   <input type="radio" name="type" value="veg" checked="checked">Veg<br>
   <input type="radio" name="type" value="non-veg">Non-Veg
   <%}else{ %>
-  <input type="radio" name="type" value="veg" >Veg<br>
-  <input type="radio" name="type" value="non-veg" checked="checked">Non-Veg
+  <input type="radio" name="type" value="veg" >Veg
+  <input type="radio" name="type" value="non-veg" checked="checked">Non-Veg<br>
   <%} %>
   <br>
   

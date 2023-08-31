@@ -81,5 +81,17 @@ public class MyDao {
 			m.merge(item);
 			t.commit();
 		}
+		public List<Customer> fetchAllcustomer(){
+			return m.createQuery("select x from Customer x").getResultList();
+		}
+		public void deleteCustomer(Customer customer) {
+			t.begin();
+			m.remove(customer);
+			t.commit();
+		}
+		public Customer finds(int id)
+		{
+			return m.find(Customer.class, id);
+		}
 	}
 
