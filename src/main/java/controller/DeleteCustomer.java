@@ -26,3 +26,4 @@ int id =Integer.parseInt(req.getParameter("id"));
 	req.getRequestDispatcher("ViewCustomer").include(req, resp);
 }
 }
+ 

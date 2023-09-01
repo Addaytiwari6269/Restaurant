@@ -16,7 +16,7 @@ List<Customer> customers = (List<Customer>) request.getAttribute("list");
 <table border="1">
 
 		<tr>
-			
+			<th>Id</th>
 			<th>CustomerName</th>
 			<th>Email</th>
 			
@@ -31,6 +31,7 @@ List<Customer> customers = (List<Customer>) request.getAttribute("list");
 		for (Customer customer :customers) {
 		%>
 		<tr>
+		    <th><%=customer.getId() %></th>
 			<th><%=customer.getFullname() %></th>
 			<th><%=customer.getEmail() %></th>
 			<th><%=customer.getMobile() %>
