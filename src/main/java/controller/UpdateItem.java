@@ -43,7 +43,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws S
        item.setId(id);
 	   item.setName(name);
 	   item.setPrice(price);
-	   item.setQuantity(quantity);
+	   item.setStock(quantity);
 	   item.setType(type);
 	  if(picture.length==0) {
 		  item.setPicture(dao.find(id).getPicture());

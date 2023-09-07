@@ -17,6 +17,12 @@ import dto.Customer;
 public class AdminViewCustomer extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//session verification...
+		if(req.getSession().getAttribute("admin")==null) {
+			resp.getWriter().print("<h1 style='color:red'>Invalid Session</h1>");
+			req.getRequestDispatcher("Login.html").include(req, resp);
+		}
+		else {
 		MyDao dao=new MyDao();
 		List<Customer> customers = dao.fetchAllcustomer();
 		
@@ -30,4 +36,5 @@ public class AdminViewCustomer extends HttpServlet {
 		}
 	}
 
+}
 }

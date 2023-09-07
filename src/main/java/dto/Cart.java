@@ -1,27 +1,24 @@
 package dto;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
+import javax.persistence.OneToMany;
 
 import lombok.Data;
 
+import javax.persistence.GeneratedValue;
+
 @Entity
 @Data
-public class AddFoodItem {
+public class Cart {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-	private String name;
-	private double price;
-	private int stock;
-	private String type;
+	int id;
+	@OneToMany
+	   List<CustomerFoodItem>foodItems;
 	
-	//to add picture we will use @Lob annotation
-	@Lob
-	private byte[]picture;
-	
-
 }

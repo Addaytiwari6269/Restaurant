@@ -27,7 +27,7 @@
   <%} %>
   <br>
   
-  Quantity:<input type="text" name="quantity" value="<%=item.getQuantity()%>"><br>
+  Quantity:<input type="text" name="quantity" value="<%=item.getStock()%>"><br>
   
   Picture:
   <%
