@@ -91,7 +91,7 @@ public class MyDao {
 			m.merge(cart);
 			t.commit();
 		}
-		
+		// these methods are developed for Customer /customer food item
 		public void update(Customer customer)
 		{
 			t.begin();
@@ -103,6 +103,13 @@ public class MyDao {
 		{
 			t.begin();
 			m.persist(foodItem);//here we add object of Customer class thatsy we using pass by reference
+			t.commit();
+		}
+		
+		public void update(CustomerFoodItem foodItem)
+		{
+			t.begin();
+			m.merge(foodItem);
 			t.commit();
 		}
 		

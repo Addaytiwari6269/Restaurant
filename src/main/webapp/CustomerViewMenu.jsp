@@ -46,24 +46,31 @@ List<CustomerFoodItem> cartitems = (List<CustomerFoodItem>) request.getAttribute
 			<th><%=item.getPrice()%></th>
 			<th><a href="removefromcart?id=<%=item.getId()%>"><button>-</button></a></th>
 			<th>
-			<%if(cartitems==null)
-			{%>0<%}else {
-				for(CustomerFoodItem foodItem :cartitems){
-					if(foodItem.getName().equals(item.getName())){%>
-					<% =foodItem.getQuantity() %>}
-									}
-			}
-			
+			<% if(cartitems==null)
+		    {%>0<%}else{
+		    	boolean flag=true;
+		    	for(CustomerFoodItem foodItem:cartitems)
+		    	{
+		    		if(foodItem.getName().equals(item.getName())){%> 
+		    		<%=foodItem.getQuantity() %>
+		    		<%flag=false;
+		    		} 
+				  }
+		    	if(flag){
+		   %>
+		   <%=0 %>
+		   <%
+		   }}
+			%>
 			</th>
+			
 			
 			<th><a href="addtocart?id=<%=item.getId()%>"><button>+</button></a></th>
 		</tr>
-		<%
-		}
-		%>
+	<%} %>
 	</table>
 	<br>
-	<a href=""><button>View Cart</button></a>
+	<a href="viewcart"><button>View Cart</button></a>
 	<a href="CustomerHome.html"><button>Back</button></a>
 </body>
 </html>
